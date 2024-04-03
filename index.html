@@ -1,28 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koniec kurestwa</title>
+    <title>KONIEC KURESTWA</title>
 </head>
 <body>
-    <h1>Koniec kurestwa</h1>
-    <div id="text-content">Ładowanie...</div>
+    <h1>KONIEC ERY FRAJERA</h1>
+    <pre id="text-content">Ładowanie...</pre>
 
     <script>
-        
         function loadText() {
             const url = "https://raw.githubusercontent.com/KoniecEryFrajera/KoniecEryFrajera/main/output_text.txt";
 
             fetch(url)
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("text-content").textContent = data;
+                    document.getElementById("text-content").innerText = data;
                 })
                 .catch(error => console.error('Błąd przy ładowaniu pliku tekstowego:', error));
         }
 
-        
         window.onload = loadText;
     </script>
 </body>
